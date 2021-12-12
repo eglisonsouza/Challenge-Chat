@@ -5,6 +5,6 @@ namespace LoraChat.Domain.Interfaces.Repositories
 {
     public interface IGitHubRepository
     {
-        IEnumerable<RepositoriesResultViewModel> GetRepositories(string nameRepository);
+        List<RepositoriesResultViewModel> GetRepositories(string nameRepository);
     }
 }

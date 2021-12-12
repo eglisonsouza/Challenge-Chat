@@ -14,10 +14,10 @@ namespace LoraChat.API.Controllers
             _gitHubService = gitHubService;
         }
 
-        [HttpGet]
-        public ActionResult<IEnumerable<dynamic>> GetRepositoriesGitHub()
+        [HttpGet("Csharp/{repositoryName}")]
+        public ActionResult<IEnumerable<dynamic>> GetRepositoriesGitHub(string repositoryName)
         {
-            return Ok(_gitHubService.GetRepositories("takenet"));
+            return Ok(_gitHubService.GetRepositories(nameRepository: repositoryName, language: "C#"));
         }
     }
 

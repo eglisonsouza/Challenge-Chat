@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text.Json;
 using LoraChat.Domain.Models;
 using LoraChat.Domain.Interfaces.Repositories;
@@ -8,10 +10,10 @@ namespace LoraChat.Infra.Repository
 {
     public class GitHubRepository : IGitHubRepository
     {
-        public IEnumerable<RepositoriesResultViewModel> GetRepositories(string nameRepository)
+        public List<RepositoriesResultViewModel> GetRepositories(string nameRepository)
         {
-            return JsonSerializer.Deserialize<IEnumerable<RepositoriesResultViewModel>>(RequestGitHub(nameRepository)
-                    .Content);
+            return (JsonSerializer.Deserialize<IEnumerable<RepositoriesResultViewModel>>(RequestGitHub(nameRepository)
+                .Content) ?? Array.Empty<RepositoriesResultViewModel>()).ToList();
         }
 
         private static IRestResponse RequestGitHub(string nameRepository)

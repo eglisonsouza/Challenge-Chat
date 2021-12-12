@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using LoraChat.Domain.Interfaces.Repositories;
 using LoraChat.Domain.Interfaces.Services;
 using LoraChat.Domain.Models;
@@ -14,10 +16,9 @@ namespace LoraChat.Domain.Services
             _gitHubRepository = gitHubRepository;
         }
 
-        public IEnumerable<RepositoriesResultViewModel> GetRepositories(string nameRepository)
+        public List<RepositoriesResultViewModel> GetRepositories(string nameRepository, string language)
         {
-            var repositories = _gitHubRepository.GetRepositories(nameRepository);
-            return repositories;
+            return _gitHubRepository.GetRepositories(nameRepository).Where(repo => repo.Language == language).ToList();
         }
     }
 }
