@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoraChat.Domain", "LoraChat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoraChat.Infra", "LoraChat.Infra\LoraChat.Infra.csproj", "{12F8BB41-616E-4B8A-B3A0-DAC0DF5DAF0F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoraChat.Shared", "LoraChat.Shared\LoraChat.Shared.csproj", "{D229A8F5-F7D7-4474-98EC-F0B64AA7AE5A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{12F8BB41-616E-4B8A-B3A0-DAC0DF5DAF0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{12F8BB41-616E-4B8A-B3A0-DAC0DF5DAF0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{12F8BB41-616E-4B8A-B3A0-DAC0DF5DAF0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D229A8F5-F7D7-4474-98EC-F0B64AA7AE5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D229A8F5-F7D7-4474-98EC-F0B64AA7AE5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D229A8F5-F7D7-4474-98EC-F0B64AA7AE5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D229A8F5-F7D7-4474-98EC-F0B64AA7AE5A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

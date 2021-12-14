@@ -16,6 +16,7 @@
     <ItemGroup>
       <ProjectReference Include="..\LoraChat.Domain\LoraChat.Domain.csproj" />
       <ProjectReference Include="..\LoraChat.Infra\LoraChat.Infra.csproj" />
+      <ProjectReference Include="..\LoraChat.Shared\LoraChat.Shared.csproj" />
     </ItemGroup>
 
 </Project>

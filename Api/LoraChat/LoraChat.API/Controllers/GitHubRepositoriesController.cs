@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using LoraChat.Domain.Interfaces.Services;
+using LoraChat.Shared.Constants;
 using Microsoft.AspNetCore.Mvc;
 namespace LoraChat.API.Controllers
 {
@@ -17,7 +18,7 @@ namespace LoraChat.API.Controllers
         [HttpGet("Csharp/{repositoryName}")]
         public ActionResult<IEnumerable<dynamic>> GetRepositoriesGitHub(string repositoryName)
         {
-            return Ok(_gitHubService.GetRepositories(nameRepository: repositoryName, language: "C#"));
+            return Ok(_gitHubService.GetRepositories(nameRepository: repositoryName, language: Language.Csharp));
         }
     }
 
