@@ -18,7 +18,15 @@ namespace LoraChat.Domain.Services
 
         public List<RepositoriesResultViewModel> GetRepositories(string nameRepository, string language)
         {
-            return _gitHubRepository.GetRepositories(nameRepository).Where(repo => repo.Language == language).ToList();
+            try
+            {
+                return _gitHubRepository.GetRepositories(nameRepository).Where(repo => repo.Language == language)
+                    .ToList();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
         }
     }
 }
